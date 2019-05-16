@@ -96,4 +96,4 @@ English Model Accuracy: 51%
 Hindi Model Accuracy: 53%
 Telugu Model Accuracy: 44%
 
-The low accuracies can be further improved by hyperparameter tuning such as increasing the dropout values and a larger test size
+The low accuracies during inference can be further improved by hyperparameter tuning such as increasing the dropout values and a larger test size
