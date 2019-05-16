@@ -1,7 +1,7 @@
 # Language-Complexity-Prediction
 This repo has code that builds language embeddings of Hindi and Telugu script and a Language Complexity Prediction model for English, Hindi and Telugu Script
 
-####Step 1: Building a custom word embedding for a language:
+#### Step 1: Building a custom word embedding for a language:
 
 In the case of English, we have open-source pretrained word embeddings available such as word2vec and GloVe that is trained on 6B words corpora from wikipedia and other sources. Since the word embedding for English is already available, I will be using a pre-trained word embedding (GloVe) for embedding English words.
 
@@ -11,7 +11,7 @@ To train the embedding, I am using the Continuous Bag Of Words algorithm which i
 
 For example, lets take {"The", "cat", ’over", "the’, "puddle"} as a context and from these words, be able to predict or generate thecenter word "jumped". This type of model we call a Continuous Bag of Words (CBOW) Model.
 
-#####CBOW Algorithm:
+##### CBOW Algorithm:
 
     Build the corpus vocabulary
     Build a CBOW (context, target) generator
@@ -23,20 +23,20 @@ For example, lets take {"The", "cat", ’over", "the’, "puddle"} as a context 
 
 The corpus is constructed using the stories in the dataset provided for Telugu and Hindi.
 
-####Step 2: Train a Language Complexity Classifier
+#### Step 2: Train a Language Complexity Classifier
 
 A NLP classifier is built and trained and the architecture I have used is a LSTM and GRU stack 
 
 ![](https://github.com/karmatta/Language-Complexity-Prediction/blob/master/Misc_files/LSTM_Dimensions.png)
 
-#####Model Architecture:
+##### Model Architecture:
 
     Use the trained language embedding to extract a 300 dim feature vector for each word
     Pass these feature vectors to the LSTM + GRU
     Dense layer 
     Softmax layer with crossentropy loss function
 
-###Data
+### Data
 
 The data set consists of original and translated stories in English, Telugu and Hindi languages.
 
@@ -52,7 +52,7 @@ Basic propressing of the data consists of removing stray English characters in H
 |Hindi      | 795         |   234 |
 | Telugu | 2133     |    570 |
 
-####DV Distribution for English
+#### DV Distribution for English
 
 | Level  | Train Count  | Train % | Test Count  | Test % |
 | :------------ |:---------------:| -----:|:---------------:| -----:|
@@ -61,7 +61,7 @@ Basic propressing of the data consists of removing stray English characters in H
 | L3 | 384     |    17% | 15 | 15%|
 | L4| 140     |    6% | 6|6%|
 
-####DV Distribution for Hindi
+#### DV Distribution for Hindi
 
 | Level  | Train Count  | Train % |Test Count  | Test % |
 | :------------ |:---------------:| -----:|:---------------:| -----:|
@@ -70,7 +70,7 @@ Basic propressing of the data consists of removing stray English characters in H
 | L3 | 107     |    15% | 27| 14%|
 | L4| 68    |    10% |13| 7%|
 
-####DV Distribution for Telugu
+#### DV Distribution for Telugu
 
 | Level  | Train Count  | Train % | Test Count  | Test % |
 | :------------ |:---------------:| -----:|:---------------:| -----:|
@@ -79,7 +79,7 @@ Basic propressing of the data consists of removing stray English characters in H
 | L3 | 61     |    15% | 14|18%|
 | L4| 29    |    10% | 9| 12%|
 
-####Model  training
+#### Model  training
 
 English model:
 ![](https://github.com/karmatta/Language-Complexity-Prediction/blob/master/Misc_files/English_lr.png)
@@ -89,3 +89,11 @@ Hindi model:
 
 Telugu model:
 ![](https://github.com/karmatta/Language-Complexity-Prediction/blob/master/Misc_files/Telugu_lr.png)
+
+#### Test Performance
+
+English Model Accuracy: 51%
+Hindi Model Accuracy: 53%
+Telugu Model Accuracy: 44%
+
+The low accuracies can be further improved by hyperparameter tuning such as increasing the dropout values and a larger test size
