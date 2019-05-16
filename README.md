@@ -1,7 +1,7 @@
 # Language-Complexity-Prediction
 This repo has code that builds language embeddings of Hindi and Telugu script and a Language Complexity Prediction model for English, Hindi and Telugu Script
 
-#### Step 1: Building a custom word embedding for a language:
+### Step 1: Building a custom word embedding for a language:
 
 In the case of English, we have open-source pretrained word embeddings available such as word2vec and GloVe that is trained on 6B words corpora from wikipedia and other sources. Since the word embedding for English is already available, I will be using a pre-trained word embedding (GloVe) for embedding English words.
 
@@ -23,7 +23,7 @@ For example, lets take {"The", "cat", ’over", "the’, "puddle"} as a context 
 
 The corpus is constructed using the stories in the dataset provided for Telugu and Hindi.
 
-#### Step 2: Train a Language Complexity Classifier
+### Step 2: Train a Language Complexity Classifier
 
 A NLP classifier is built and trained and the architecture I have used is a LSTM and GRU stack 
 
@@ -81,13 +81,13 @@ Basic propressing of the data consists of removing stray English characters in H
 
 #### Model  training
 
-English model:
+##### English model:
 ![](https://github.com/karmatta/Language-Complexity-Prediction/blob/master/Misc_files/English_lr.png)
 
-Hindi model:
+##### Hindi model:
 ![](https://github.com/karmatta/Language-Complexity-Prediction/blob/master/Misc_files/Hindi_lr.png)
 
-Telugu model:
+##### Telugu model:
 ![](https://github.com/karmatta/Language-Complexity-Prediction/blob/master/Misc_files/Telugu_lr.png)
 
 #### Test Performance
