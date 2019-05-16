@@ -53,6 +53,7 @@ Basic propressing of the data consists of removing stray English characters in H
 | Telugu | 2133     |    570 |
 
 ####DV Distribution for English
+
 | Level  | Train Count  | Train % | Test Count  | Test % |
 | :------------ |:---------------:| -----:|:---------------:| -----:|
 | L1     | 972| 42%  |40|40%|
@@ -61,6 +62,7 @@ Basic propressing of the data consists of removing stray English characters in H
 | L4| 140     |    6% | 6|6%|
 
 ####DV Distribution for Hindi
+
 | Level  | Train Count  | Train % |Test Count  | Test % |
 | :------------ |:---------------:| -----:|:---------------:| -----:|
 | L1     | 302| 42%  | 84| 44%|
@@ -69,6 +71,7 @@ Basic propressing of the data consists of removing stray English characters in H
 | L4| 68    |    10% |13| 7%|
 
 ####DV Distribution for Telugu
+
 | Level  | Train Count  | Train % | Test Count  | Test % |
 | :------------ |:---------------:| -----:|:---------------:| -----:|
 | L1     | 86| 42%  | 37| 47%|
